@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home - Krelis Legacy College</title>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+  <header class="krelis-header" role="banner">
+    <a href="index.html" class="krelis-header__brand" aria-label="Krelis Legacy College Home">
+      <img src="logo.png" alt="Krelis Legacy College Logo" class="krelis-header__logo">
+      <h1 class="krelis-header__title">Krelis Legacy College</h1>
+    </a>
+    <button 
+      class="krelis-header__menu-toggle" 
+      id="menuToggle" 
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      ☰
+    </button>
+  </header>
+
+  <!-- ===== MOBILE NAVIGATION ===== -->
+  <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <button 
+      class="krelis-nav__close" 
+      id="menuClose" 
+      aria-label="Close navigation menu"
+    >
+      ×
+    </button>
+    <ul class="krelis-nav__list">
+      <li class="krelis-nav__item"><a href="index.html" class="krelis-nav__link active">Home</a></li>
+      <li class="krelis-nav__item"><a href="about.html" class="krelis-nav__link">About Us</a></li>
+      <li class="krelis-nav__item"><a href="admissions.html" class="krelis-nav__link">Admissions</a></li>
+      <li class="krelis-nav__item"><a href="academics.html" class="krelis-nav__link">Academics</a></li>
+      <li class="krelis-nav__item"><a href="calendar.html" class="krelis-nav__link">Calendar</a></li>
+      <li class="krelis-nav__item"><a href="contact.html" class="krelis-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay for mobile menu -->
+  <div class="krelis-overlay" id="menuOverlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="krelis-main" role="main">
+    
+    <!-- Hero Section -->
+    <section class="krelis-hero">
+      <h2 class="krelis-hero__title">Welcome to Krelis Legacy College</h2>
+      <img 
+        src="banner.jpg" 
+        alt="Krelis Legacy College main building with modern architecture"
+        class="krelis-hero__image"
+      >
+    </section>
+
+    <!-- CTA Grid: Four primary action buttons with ORANGE icons -->
+    <section class="krelis-cta-grid" aria-label="Quick access navigation">
+      <a href="admissions.html" class="krelis-cta-btn" aria-label="Go to Admissions page">
+        <span class="krelis-cta-btn__icon" aria-hidden="true">🎓</span>
+        <span class="krelis-cta-btn__text">ADMISSIONS</span>
+      </a>
+      <a href="about.html" class="krelis-cta-btn" aria-label="Go to About Us page">
+        <span class="krelis-cta-btn__icon" aria-hidden="true">ℹ️</span>
+        <span class="krelis-cta-btn__text">ABOUT US</span>
+      </a>
+      <a href="academics.html" class="krelis-cta-btn" aria-label="Go to Academics page">
+        <span class="krelis-cta-btn__icon" aria-hidden="true">📚</span>
+        <span class="krelis-cta-btn__text">ACADEMICS</span>
+      </a>
+      <a href="contact.html" class="krelis-cta-btn" aria-label="Go to Contact page">
+        <span class="krelis-cta-btn__icon" aria-hidden="true">📞</span>
+        <span class="krelis-cta-btn__text">CONTACT</span>
+      </a>
+    </section>
+
+    <!-- Resumption Date Section: ORANGE text -->
+    <section class="krelis-resumption" aria-label="School resumption information">
+      <p class="krelis-resumption__label">Resumption Date</p>
+      <p class="krelis-resumption__date">15th Sept 2025</p>
+      <button class="krelis-calendar-btn" onclick="window.location.href='calendar.html'">
+        View Calendar
+      </button>
+    </section>
+    
+</body>
+<script src="script.js"></script>
+</html>

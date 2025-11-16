@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Us - Krelis Legacy College</title>
+</head>
+<body>
+    
+    <!-- ===== HEADER ===== -->
+  <header class="krelis-header" role="banner">
+    <a href="index.html" class="krelis-header__brand" aria-label="Krelis Legacy College Home">
+      <img src="logo.png" alt="Krelis Legacy College Logo" class="krelis-header__logo">
+      <h1 class="krelis-header__title">Krelis Legacy College</h1>
+    </a>
+    <button 
+      class="krelis-header__menu-toggle" 
+      id="menuToggle" 
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      ☰
+    </button>
+  </header>
+
+  <!-- ===== MOBILE NAVIGATION ===== -->
+  <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <button 
+      class="krelis-nav__close" 
+      id="menuClose" 
+      aria-label="Close navigation menu"
+    >
+      ×
+    </button>
+    <ul class="krelis-nav__list">
+      <li class="krelis-nav__item"><a href="index.html" class="krelis-nav__link">Home</a></li>
+      <li class="krelis-nav__item"><a href="about.html" class="krelis-nav__link active">About Us</a></li>
+      <li class="krelis-nav__item"><a href="admissions.html" class="krelis-nav__link">Admissions</a></li>
+      <li class="krelis-nav__item"><a href="academics.html" class="krelis-nav__link">Academics</a></li>
+      <li class="krelis-nav__item"><a href="calendar.html" class="krelis-nav__link">Calendar</a></li>
+      <li class="krelis-nav__item"><a href="contact.html" class="krelis-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay for mobile menu -->
+  <div class="krelis-overlay" id="menuOverlay"></div>
+
+  <!-- ===== HERO SECTION WITH MISSION CARDS ===== -->
+  <section class="krelis-about-hero">
+    <h2 class="krelis-about-hero__title">About Krelis Legacy School</h2>
+    <p class="krelis-about-hero__subtitle">Building excellence in academics and characters since 2005</p>
+    
+    <!-- Mission Cards Grid -->
+    <div class="krelis-mission-grid">
+      <div class="krelis-mission-card krelis-mission-card--blue">
+        <h3 class="krelis-mission-card__title">Mission</h3>
+        <p class="krelis-mission-card__text">To nurture disciplined, knowledgeable, and future-ready students</p>
+      </div>
+      <div class="krelis-mission-card krelis-mission-card--orange">
+        <h3 class="krelis-mission-card__title">Mission</h3>
+        <p class="krelis-mission-card__text">To be a model institution of learning in Nigeria</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIRECTOR'S MESSAGE SECTION ===== -->
+  <section class="krelis-director">
+    <div class="krelis-director__header">
+      <div class="krelis-director__image-wrapper">
+        <img 
+          src="dp.jpg" 
+          alt="Director of Krelis Legacy College"
+          class="krelis-director__image"
+        >
+      </div>
+      <div class="krelis-director__content">
+        <h3 class="krelis-director__title">Director's Message</h3>
+        <blockquote class="krelis-director__quote">
+          "Welcome to Krelis Legacy School, where we are dedicated to fostering an environment of learning and growth."
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Statistics Grid -->
+    <div class="krelis-stats">
+      <div class="krelis-stat">
+        <span class="krelis-stat__icon" aria-hidden="true">🎓</span>
+        <div class="krelis-stat__number">500+</div>
+        <div class="krelis-stat__label">Students Enrolled</div>
+      </div>
+      <div class="krelis-stat">
+        <span class="krelis-stat__icon" aria-hidden="true">👥</span>
+        <div class="krelis-stat__number">20+</div>
+        <div class="krelis-stat__label">Experienced Teachers</div>
+      </div>
+      <div class="krelis-stat">
+        <span class="krelis-stat__icon" aria-hidden="true">⭐</span>
+        <div class="krelis-stat__number">15+</div>
+        <div class="krelis-stat__label">Years of Excellence</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BUTTON ===== -->
+  <div class="krelis-cta-wrapper">
+    <a href="admissions.html" class="krelis-cta-button">
+      Learn More About Admissions
+    </a>
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
