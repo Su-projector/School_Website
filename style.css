@@ -1,3076 +1,3076 @@
 /* ===== INDEX.HTML ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f8f9fa;
-    }
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
 
-    /* ===== HEADER ===== */
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== MAIN CONTENT ===== */
+.krelis-main {
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.krelis-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.krelis-hero__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.krelis-hero__image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
+
+/* CTA Grid - CORRECTED COLORS */
+.krelis-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.krelis-cta-btn {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #002147;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.krelis-cta-btn:hover,
+.krelis-cta-btn:focus {
+    border-color: #F29F05;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.25);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-cta-btn__icon {
+    font-size: 2rem;
+    color: #F29F05;
+    transition: transform 0.3s ease;
+}
+
+.krelis-cta-btn:hover .krelis-cta-btn__icon,
+.krelis-cta-btn:focus .krelis-cta-btn__icon {
+    transform: scale(1.15);
+}
+
+.krelis-cta-btn__text {
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Resumption Section */
+.krelis-resumption {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.krelis-resumption__label {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #F29F05;
+    margin-bottom: 0.25rem;
+}
+
+.krelis-resumption__date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F29F05;
+    margin-bottom: 1.5rem;
+}
+
+.krelis-calendar-btn {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0, 33, 71, 0.3);
+}
+
+.krelis-calendar-btn:hover,
+.krelis-calendar-btn:focus {
+    background: #003366;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 33, 71, 0.4);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
     .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
+    padding: 1.25rem 3rem;
     }
 
     .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+    font-size: 1.3rem;
     }
 
-    .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
-    .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
-    }
-
-    .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
-    }
-
-    .krelis-nav__item {
-      margin-bottom: 1rem;
-    }
-
-    .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .krelis-nav__link:hover,
-    .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
-    }
-
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
-    .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
-    }
-
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* ===== MAIN CONTENT ===== */
     .krelis-main {
-      padding: 2rem 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Hero Section */
-    .krelis-hero {
-      text-align: center;
-      margin-bottom: 2rem;
+    padding: 3rem 2rem;
     }
 
     .krelis-hero__title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
+    font-size: 2.75rem;
     }
 
-    .krelis-hero__image {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-      margin-bottom: 2rem;
-    }
-
-    /* CTA Grid - CORRECTED COLORS */
     .krelis-cta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
     }
 
     .krelis-cta-btn {
-      background: #ffffff;
-      border: 2px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 1.25rem 1rem;
-      text-align: center;
-      text-decoration: none;
-      color: #002147;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .krelis-cta-btn:hover,
-    .krelis-cta-btn:focus {
-      border-color: #F29F05;
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.25);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    .krelis-cta-btn__icon {
-      font-size: 2rem;
-      color: #F29F05;
-      transition: transform 0.3s ease;
-    }
-
-    .krelis-cta-btn:hover .krelis-cta-btn__icon,
-    .krelis-cta-btn:focus .krelis-cta-btn__icon {
-      transform: scale(1.15);
-    }
-
-    .krelis-cta-btn__text {
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Resumption Section */
-    .krelis-resumption {
-      text-align: center;
-      margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-resumption__label {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #F29F05;
-      margin-bottom: 0.25rem;
+    font-size: 2rem;
     }
 
     .krelis-resumption__date {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #F29F05;
-      margin-bottom: 1.5rem;
+    font-size: 1.75rem;
     }
+}
 
-    .krelis-calendar-btn {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      display: inline-block;
-      box-shadow: 0 4px 12px rgba(0, 33, 71, 0.3);
-    }
-
-    .krelis-calendar-btn:hover,
-    .krelis-calendar-btn:focus {
-      background: #003366;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 33, 71, 0.4);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-main {
-        padding: 3rem 2rem;
-      }
-
-      .krelis-hero__title {
-        font-size: 2.75rem;
-      }
-
-      .krelis-cta-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-      }
-
-      .krelis-cta-btn {
-        padding: 1.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-resumption__label {
-        font-size: 2rem;
-      }
-
-      .krelis-resumption__date {
-        font-size: 1.75rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-cta-btn {
-        padding: 1.75rem 1.25rem;
-      }
-
-      .krelis-cta-btn__icon {
-        font-size: 2.5rem;
-      }
-    }
-
-    /*  */
-
-  /* ===== ABOUT.HTML ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-hero__title {
+    font-size: 3rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue Background) ===== */
+    .krelis-cta-btn {
+    padding: 1.75rem 1.25rem;
+    }
+
+    .krelis-cta-btn__icon {
+    font-size: 2.5rem;
+    }
+}
+
+/*  */
+
+/* ===== ABOUT.HTML ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue Background) ===== */
+.krelis-about-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-about-hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-about-hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* Mission Cards Grid */
+.krelis-mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.krelis-mission-card {
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: left;
+}
+
+.krelis-mission-card--blue {
+    background: #0057A8;
+}
+
+.krelis-mission-card--orange {
+    background: #F29F05;
+    color: #ffffff;
+}
+
+.krelis-mission-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.krelis-mission-card__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ===== DIRECTOR'S MESSAGE SECTION ===== */
+.krelis-director {
+    background: #ffffff;
+    padding: 2.5rem 1.5rem;
+}
+
+.krelis-director__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.krelis-director__image-wrapper {
+    flex-shrink: 0;
+}
+
+.krelis-director__image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(180deg, #E3F2FD 0%, #81C784 100%);
+}
+
+.krelis-director__content {
+    flex: 1;
+}
+
+.krelis-director__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.75rem;
+}
+
+.krelis-director__quote {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+}
+
+/* ===== STATISTICS SECTION ===== */
+.krelis-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.krelis-stat {
+    text-align: center;
+}
+
+.krelis-stat__icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.krelis-stat__number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.25rem;
+}
+
+.krelis-stat__label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* ===== CTA BUTTON ===== */
+.krelis-cta-wrapper {
+    text-align: center;
+    padding: 0 1.5rem 2.5rem;
+}
+
+.krelis-cta-button {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
+}
+
+.krelis-cta-button:hover,
+.krelis-cta-button:focus {
+    background: #D88D04;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-about-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-about-hero__title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-about-hero__subtitle {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-      opacity: 0.95;
+    font-size: 1.25rem;
     }
 
-    /* Mission Cards Grid */
     .krelis-mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
+    max-width: 800px;
+    gap: 1.5rem;
     }
 
     .krelis-mission-card {
-      border-radius: 12px;
-      padding: 1.5rem 1rem;
-      text-align: left;
+    padding: 2rem 1.5rem;
     }
 
-    .krelis-mission-card--blue {
-      background: #0057A8;
-    }
-
-    .krelis-mission-card--orange {
-      background: #F29F05;
-      color: #ffffff;
-    }
-
-    .krelis-mission-card__title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .krelis-mission-card__text {
-      font-size: 1rem;
-      line-height: 1.5;
-      font-weight: 400;
-    }
-
-    /* ===== DIRECTOR'S MESSAGE SECTION ===== */
     .krelis-director {
-      background: #ffffff;
-      padding: 2.5rem 1.5rem;
-    }
-
-    .krelis-director__header {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .krelis-director__image-wrapper {
-      flex-shrink: 0;
+    padding: 3.5rem 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
     }
 
     .krelis-director__image {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: linear-gradient(180deg, #E3F2FD 0%, #81C784 100%);
-    }
-
-    .krelis-director__content {
-      flex: 1;
+    width: 140px;
+    height: 140px;
     }
 
     .krelis-director__title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 0.75rem;
+    font-size: 2rem;
     }
 
     .krelis-director__quote {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-      font-style: italic;
+    font-size: 1.1rem;
     }
 
-    /* ===== STATISTICS SECTION ===== */
     .krelis-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      padding: 0 1rem;
-    }
-
-    .krelis-stat {
-      text-align: center;
-    }
-
-    .krelis-stat__icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      display: block;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    margin-bottom: 2.5rem;
     }
 
     .krelis-stat__number {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 0.25rem;
+    font-size: 2rem;
     }
 
     .krelis-stat__label {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #333;
-      line-height: 1.3;
+    font-size: 1rem;
     }
+}
 
-    /* ===== CTA BUTTON ===== */
-    .krelis-cta-wrapper {
-      text-align: center;
-      padding: 0 1.5rem 2.5rem;
-    }
-
-    .krelis-cta-button {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
-    }
-
-    .krelis-cta-button:hover,
-    .krelis-cta-button:focus {
-      background: #D88D04;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-about-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-about-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-about-hero__subtitle {
-        font-size: 1.25rem;
-      }
-
-      .krelis-mission-grid {
-        max-width: 800px;
-        gap: 1.5rem;
-      }
-
-      .krelis-mission-card {
-        padding: 2rem 1.5rem;
-      }
-
-      .krelis-director {
-        padding: 3.5rem 3rem;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      .krelis-director__image {
-        width: 140px;
-        height: 140px;
-      }
-
-      .krelis-director__title {
-        font-size: 2rem;
-      }
-
-      .krelis-director__quote {
-        font-size: 1.1rem;
-      }
-
-      .krelis-stats {
-        gap: 2.5rem;
-        padding: 0 2rem;
-        margin-bottom: 2.5rem;
-      }
-
-      .krelis-stat__number {
-        font-size: 2rem;
-      }
-
-      .krelis-stat__label {
-        font-size: 1rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-about-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-mission-grid {
-        max-width: 900px;
-      }
-
-      .krelis-director__header {
-        gap: 2rem;
-      }
-
-      .krelis-stats {
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    /*  */
-
-    /* ===== ACADEMICS.HTML ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-about-hero__title {
+    font-size: 3.5rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue) ===== */
+    .krelis-mission-grid {
+    max-width: 900px;
+    }
+
+    .krelis-director__header {
+    gap: 2rem;
+    }
+
+    .krelis-stats {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+/*  */
+
+/* ===== ACADEMICS.HTML ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue) ===== */
+.krelis-academics-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-academics-hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-academics-hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+/* ===== ACCORDION SECTION ===== */
+.krelis-accordion {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-accordion__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-accordion__button {
+    width: 100%;
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(242, 159, 5, 0.3);
+    text-align: left;
+}
+
+.krelis-accordion__button:hover,
+.krelis-accordion__button:focus {
+    background: #D88D04;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+.krelis-accordion__button[aria-expanded="true"] {
+    border-radius: 8px 8px 0 0;
+}
+
+.krelis-accordion__icon {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.krelis-accordion__button[aria-expanded="true"] .krelis-accordion__icon {
+    transform: rotate(90deg);
+}
+
+.krelis-accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid #F29F05;
+    border-top: none;
+}
+
+.krelis-accordion__content.active {
+    max-height: 3000px;
+    padding: 1.5rem;
+}
+
+/* Accordion Content Styling */
+.accordion-content-wrapper h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.75rem;
+}
+
+.accordion-content-wrapper p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.accordion-content-wrapper ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.accordion-content-wrapper li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+/* Two-column subject list */
+.subject-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    margin-top: 0.75rem;
+}
+
+.subject-grid li {
+    margin-bottom: 0.25rem;
+}
+
+/* Section divider */
+.content-divider {
+    margin: 1.5rem 0;
+    border-top: 2px solid #ddd;
+}
+
+/* ===== EXTRACURRICULAR SECTION ===== */
+.krelis-extracurricular {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-extracurricular__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #002147;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.krelis-extracurricular__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.krelis-extracurricular__badge {
+    background: #FFE5CC;
+    border: 2px solid #F29F05;
+    border-radius: 20px;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #002147;
+}
+
+/* ===== CTA BUTTON ===== */
+.krelis-cta-wrapper {
+    text-align: center;
+    padding: 0 1.5rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-cta-button {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.krelis-cta-button:hover,
+.krelis-cta-button:focus {
+    background: #D88D04;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-academics-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-academics-hero__title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-academics-hero__subtitle {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      opacity: 0.95;
+    font-size: 1.25rem;
     }
 
-    /* ===== ACCORDION SECTION ===== */
     .krelis-accordion {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    padding: 3rem 2rem;
     }
 
     .krelis-accordion__item {
-      margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     }
 
     .krelis-accordion__button {
-      width: 100%;
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.1rem 1.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(242, 159, 5, 0.3);
-      text-align: left;
-    }
-
-    .krelis-accordion__button:hover,
-    .krelis-accordion__button:focus {
-      background: #D88D04;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    .krelis-accordion__button[aria-expanded="true"] {
-      border-radius: 8px 8px 0 0;
-    }
-
-    .krelis-accordion__icon {
-      font-size: 1.5rem;
-      font-weight: 700;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-      margin-left: 0.5rem;
-    }
-
-    .krelis-accordion__button[aria-expanded="true"] .krelis-accordion__icon {
-      transform: rotate(90deg);
-    }
-
-    .krelis-accordion__content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.4s ease;
-      background: #f8f9fa;
-      border-radius: 0 0 8px 8px;
-      border: 2px solid #F29F05;
-      border-top: none;
+    padding: 1.25rem 2rem;
+    font-size: 1.15rem;
     }
 
     .krelis-accordion__content.active {
-      max-height: 3000px;
-      padding: 1.5rem;
+    padding: 2rem;
     }
 
-    /* Accordion Content Styling */
-    .accordion-content-wrapper h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 0.75rem;
-    }
-
-    .accordion-content-wrapper p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    .accordion-content-wrapper ul {
-      list-style: disc;
-      padding-left: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
+    .accordion-content-wrapper p,
     .accordion-content-wrapper li {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 0.25rem;
-    }
-
-    /* Two-column subject list */
-    .subject-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem 1rem;
-      margin-top: 0.75rem;
-    }
-
-    .subject-grid li {
-      margin-bottom: 0.25rem;
-    }
-
-    /* Section divider */
-    .content-divider {
-      margin: 1.5rem 0;
-      border-top: 2px solid #ddd;
-    }
-
-    /* ===== EXTRACURRICULAR SECTION ===== */
-    .krelis-extracurricular {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .krelis-extracurricular__title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #002147;
-      text-align: center;
-      margin-bottom: 1.5rem;
+    font-size: 1rem;
     }
 
     .krelis-extracurricular__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-      margin-bottom: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     }
 
     .krelis-extracurricular__badge {
-      background: #FFE5CC;
-      border: 2px solid #F29F05;
-      border-radius: 20px;
-      padding: 0.5rem 0.75rem;
-      text-align: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #002147;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
     }
+}
 
-    /* ===== CTA BUTTON ===== */
-    .krelis-cta-wrapper {
-      text-align: center;
-      padding: 0 1.5rem 2.5rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .krelis-cta-button {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .krelis-cta-button:hover,
-    .krelis-cta-button:focus {
-      background: #D88D04;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-academics-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-academics-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-academics-hero__subtitle {
-        font-size: 1.25rem;
-      }
-
-      .krelis-accordion {
-        padding: 3rem 2rem;
-      }
-
-      .krelis-accordion__item {
-        margin-bottom: 1.25rem;
-      }
-
-      .krelis-accordion__button {
-        padding: 1.25rem 2rem;
-        font-size: 1.15rem;
-      }
-
-      .krelis-accordion__content.active {
-        padding: 2rem;
-      }
-
-      .accordion-content-wrapper p,
-      .accordion-content-wrapper li {
-        font-size: 1rem;
-      }
-
-      .krelis-extracurricular__grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-      }
-
-      .krelis-extracurricular__badge {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-academics-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-accordion {
-        max-width: 900px;
-      }
-
-      .krelis-accordion__button {
-        font-size: 1.2rem;
-      }
-
-      .krelis-extracurricular__grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    /*  */
-
-     /* ===== ADMISSION FORM ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-academics-hero__title {
+    font-size: 3.5rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue) ===== */
+    .krelis-accordion {
+    max-width: 900px;
+    }
+
+    .krelis-accordion__button {
+    font-size: 1.2rem;
+    }
+
+    .krelis-extracurricular__grid {
+    grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/*  */
+
+    /* ===== ADMISSION FORM ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue) ===== */
+.krelis-form-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-form-hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-form-hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+/* ===== FORM SECTION ===== */
+.krelis-form-wrapper {
+    background: #ffffff;
+    padding: 2rem 1.5rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.krelis-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.krelis-form__label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002147;
+    margin-bottom: 0.5rem;
+}
+
+.krelis-form__label--required::after {
+    content: "*";
+    color: #002147;
+    margin-left: 2px;
+}
+
+.krelis-form__input {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #d0d0d0;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.krelis-form__input:focus {
+    outline: none;
+    border-color: #F29F05;
+    box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
+}
+
+.krelis-form__input::placeholder {
+    color: #999;
+}
+
+/* Date input styling */
+.krelis-form__input[type="date"] {
+    position: relative;
+}
+
+.krelis-form__input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Textarea styling */
+.krelis-form__textarea {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #d0d0d0;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.krelis-form__textarea:focus {
+    outline: none;
+    border-color: #F29F05;
+    box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
+}
+
+/* Radio buttons styling */
+.krelis-form__radio-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.krelis-form__radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.krelis-form__radio {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #F29F05;
+}
+
+.krelis-form__radio-label {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Submit button */
+.krelis-form__submit {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.1rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
+    cursor: pointer;
+}
+
+.krelis-form__submit:hover,
+.krelis-form__submit:focus {
+    background: #D88D04;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+/* Disclaimer text */
+.krelis-form__disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-form-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-form-hero__title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-form-hero__subtitle {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      opacity: 0.95;
+    font-size: 1.25rem;
     }
 
-    /* ===== FORM SECTION ===== */
     .krelis-form-wrapper {
-      background: #ffffff;
-      padding: 2rem 1.5rem 2.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    padding: 3rem 2.5rem;
     }
 
     .krelis-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
+    gap: 1.5rem;
     }
 
-    .krelis-form__group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .krelis-form__label {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #002147;
-      margin-bottom: 0.5rem;
-    }
-
-    .krelis-form__label--required::after {
-      content: "*";
-      color: #002147;
-      margin-left: 2px;
-    }
-
-    .krelis-form__input {
-      padding: 0.85rem 1rem;
-      font-size: 1rem;
-      border: 2px solid #d0d0d0;
-      border-radius: 8px;
-      font-family: inherit;
-      transition: all 0.3s ease;
-      background: #ffffff;
-    }
-
-    .krelis-form__input:focus {
-      outline: none;
-      border-color: #F29F05;
-      box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
-    }
-
-    .krelis-form__input::placeholder {
-      color: #999;
-    }
-
-    /* Date input styling */
-    .krelis-form__input[type="date"] {
-      position: relative;
-    }
-
-    .krelis-form__input[type="date"]::-webkit-calendar-picker-indicator {
-      cursor: pointer;
-      font-size: 1.1rem;
-    }
-
-    /* Textarea styling */
+    .krelis-form__input,
     .krelis-form__textarea {
-      padding: 0.85rem 1rem;
-      font-size: 1rem;
-      border: 2px solid #d0d0d0;
-      border-radius: 8px;
-      font-family: inherit;
-      transition: all 0.3s ease;
-      background: #ffffff;
-      resize: vertical;
-      min-height: 100px;
+    font-size: 1.05rem;
     }
 
-    .krelis-form__textarea:focus {
-      outline: none;
-      border-color: #F29F05;
-      box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
-    }
-
-    /* Radio buttons styling */
-    .krelis-form__radio-group {
-      display: flex;
-      gap: 2rem;
-      margin-top: 0.5rem;
-    }
-
-    .krelis-form__radio-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .krelis-form__radio {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      accent-color: #F29F05;
-    }
-
-    .krelis-form__radio-label {
-      font-size: 1rem;
-      color: #333;
-      cursor: pointer;
-    }
-
-    /* Submit button */
     .krelis-form__submit {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.1rem 2rem;
-      font-size: 1.15rem;
-      font-weight: 700;
-      border-radius: 8px;
-      margin-top: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
-      cursor: pointer;
+    font-size: 1.25rem;
+    padding: 1.2rem 2.5rem;
     }
+}
 
-    .krelis-form__submit:hover,
-    .krelis-form__submit:focus {
-      background: #D88D04;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    /* Disclaimer text */
-    .krelis-form__disclaimer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-form-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-form-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-form-hero__subtitle {
-        font-size: 1.25rem;
-      }
-
-      .krelis-form-wrapper {
-        padding: 3rem 2.5rem;
-      }
-
-      .krelis-form {
-        gap: 1.5rem;
-      }
-
-      .krelis-form__input,
-      .krelis-form__textarea {
-        font-size: 1.05rem;
-      }
-
-      .krelis-form__submit {
-        font-size: 1.25rem;
-        padding: 1.2rem 2.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-form-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-form-wrapper {
-        max-width: 900px;
-      }
-    }
-
-    /*  */
-
-    /* ===== ADMISSION ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-form-hero__title {
+    font-size: 3.5rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue) ===== */
+    .krelis-form-wrapper {
+    max-width: 900px;
+    }
+}
+
+/*  */
+
+/* ===== ADMISSION ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue) ===== */
+.krelis-admissions-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-admissions-hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-admissions-hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+/* ===== ADMISSION PROCESS SECTION ===== */
+.krelis-process {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-process__header {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.krelis-process__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.krelis-process__list {
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    padding: 1.5rem 1rem;
+}
+
+.krelis-process__step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.krelis-process__step:last-child {
+    margin-bottom: 0;
+}
+
+.krelis-process__number {
+    background: #F29F05;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.krelis-process__content {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.krelis-process__step-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.krelis-process__step-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* ===== CTA BUTTON ===== */
+.krelis-cta-wrapper {
+    text-align: center;
+    padding: 2rem 1.5rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-cta-button {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.krelis-cta-button:hover,
+.krelis-cta-button:focus {
+    background: #D88D04;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-admissions-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-admissions-hero__title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-admissions-hero__subtitle {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      opacity: 0.95;
+    font-size: 1.25rem;
     }
 
-    /* ===== ADMISSION PROCESS SECTION ===== */
     .krelis-process {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    padding: 2.5rem 2rem;
     }
 
     .krelis-process__header {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      border-radius: 8px 8px 0 0;
-      margin-bottom: 0;
-      text-align: center;
+    padding: 1.25rem 2rem;
     }
 
     .krelis-process__title {
-      font-size: 1.5rem;
-      font-weight: 700;
+    font-size: 1.75rem;
     }
 
     .krelis-process__list {
-      background: #f8f9fa;
-      border-radius: 0 0 8px 8px;
-      padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
     }
 
     .krelis-process__step {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .krelis-process__step:last-child {
-      margin-bottom: 0;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
     }
 
     .krelis-process__number {
-      background: #F29F05;
-      color: #ffffff;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .krelis-process__content {
-      flex: 1;
-      padding-top: 0.25rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
     }
 
     .krelis-process__step-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 0.25rem;
-      line-height: 1.3;
+    font-size: 1.25rem;
     }
 
     .krelis-process__step-description {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #333;
-    }
-
-    /* ===== CTA BUTTON ===== */
-    .krelis-cta-wrapper {
-      text-align: center;
-      padding: 2rem 1.5rem 2.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    font-size: 1rem;
     }
 
     .krelis-cta-button {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.2rem 2.5rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
-      width: 100%;
-      max-width: 400px;
+    font-size: 1.3rem;
+    padding: 1.3rem 3rem;
     }
+}
 
-    .krelis-cta-button:hover,
-    .krelis-cta-button:focus {
-      background: #D88D04;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-admissions-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-admissions-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-admissions-hero__subtitle {
-        font-size: 1.25rem;
-      }
-
-      .krelis-process {
-        padding: 2.5rem 2rem;
-      }
-
-      .krelis-process__header {
-        padding: 1.25rem 2rem;
-      }
-
-      .krelis-process__title {
-        font-size: 1.75rem;
-      }
-
-      .krelis-process__list {
-        padding: 2rem 1.5rem;
-      }
-
-      .krelis-process__step {
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .krelis-process__number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-      }
-
-      .krelis-process__step-title {
-        font-size: 1.25rem;
-      }
-
-      .krelis-process__step-description {
-        font-size: 1rem;
-      }
-
-      .krelis-cta-button {
-        font-size: 1.3rem;
-        padding: 1.3rem 3rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-admissions-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-process {
-        max-width: 900px;
-      }
-
-      .krelis-process__step {
-        gap: 2rem;
-      }
-    }
-
-    /*  */
-
-    /* ===== CALENDAR ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-admissions-hero__title {
+    font-size: 3.5rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue) ===== */
+    .krelis-process {
+    max-width: 900px;
+    }
+
+    .krelis-process__step {
+    gap: 2rem;
+    }
+}
+
+/*  */
+
+/* ===== CALENDAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue) ===== */
+.krelis-calendar-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-calendar-hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-calendar-hero__subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+/* ===== CALENDAR EVENTS SECTION ===== */
+.krelis-calendar-content {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-calendar-month {
+    margin-bottom: 2rem;
+}
+
+.krelis-calendar-month:last-child {
+    margin-bottom: 0;
+}
+
+.krelis-calendar-month__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.krelis-calendar-month__icon {
+    font-size: 1.75rem;
+    color: #002147;
+    flex-shrink: 0;
+}
+
+.krelis-calendar-month__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #002147;
+}
+
+.krelis-calendar-month__events {
+    list-style: disc;
+    padding-left: 3rem;
+    margin: 0;
+}
+
+.krelis-calendar-month__event {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.krelis-calendar-month__event:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-calendar-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-calendar-hero__title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-calendar-hero__subtitle {
-      font-size: 1.05rem;
-      font-weight: 400;
-      line-height: 1.5;
-      opacity: 0.95;
+    font-size: 1.2rem;
     }
 
-    /* ===== CALENDAR EVENTS SECTION ===== */
     .krelis-calendar-content {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    padding: 3rem 2.5rem;
     }
 
     .krelis-calendar-month {
-      margin-bottom: 2rem;
-    }
-
-    .krelis-calendar-month:last-child {
-      margin-bottom: 0;
+    margin-bottom: 2.5rem;
     }
 
     .krelis-calendar-month__header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
     }
 
     .krelis-calendar-month__icon {
-      font-size: 1.75rem;
-      color: #002147;
-      flex-shrink: 0;
+    font-size: 2rem;
     }
 
     .krelis-calendar-month__title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #002147;
+    font-size: 1.5rem;
     }
 
     .krelis-calendar-month__events {
-      list-style: disc;
-      padding-left: 3rem;
-      margin: 0;
+    padding-left: 3.5rem;
     }
 
     .krelis-calendar-month__event {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
     }
+}
 
-    .krelis-calendar-month__event:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-calendar-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-calendar-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-calendar-hero__subtitle {
-        font-size: 1.2rem;
-      }
-
-      .krelis-calendar-content {
-        padding: 3rem 2.5rem;
-      }
-
-      .krelis-calendar-month {
-        margin-bottom: 2.5rem;
-      }
-
-      .krelis-calendar-month__header {
-        gap: 1rem;
-        margin-bottom: 1.25rem;
-      }
-
-      .krelis-calendar-month__icon {
-        font-size: 2rem;
-      }
-
-      .krelis-calendar-month__title {
-        font-size: 1.5rem;
-      }
-
-      .krelis-calendar-month__events {
-        padding-left: 3.5rem;
-      }
-
-      .krelis-calendar-month__event {
-        font-size: 1.05rem;
-        margin-bottom: 0.6rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-calendar-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-calendar-content {
-        max-width: 900px;
-      }
-
-      .krelis-calendar-month__title {
-        font-size: 1.6rem;
-      }
-    }
-
-    /*  */
-
-    /* ===== CONTACTS ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* ===== HEADER ===== */
-    .krelis-header {
-      background: #002147;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .krelis-header__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .krelis-header__logo {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .krelis-header__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
+@media (min-width: 1024px) {
     .krelis-header__menu-toggle {
-      background: transparent;
-      color: #ffffff;
-      font-size: 1.8rem;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+    display: none;
     }
 
-    .krelis-header__menu-toggle:hover,
-    .krelis-header__menu-toggle:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
-    }
-
-    /* Mobile Navigation Menu */
     .krelis-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100vh;
-      background: #002147;
-      padding: 2rem 1.5rem;
-      transition: right 0.3s ease;
-      z-index: 2000;
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .krelis-nav.active {
-      right: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
     .krelis-nav__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: #ffffff;
-      font-size: 2rem;
-      background: transparent;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .krelis-nav__close:hover,
-    .krelis-nav__close:focus {
-      background: rgba(255, 255, 255, 0.1);
-      outline: 2px solid #F29F05;
-      outline-offset: 2px;
+    display: none;
     }
 
     .krelis-nav__list {
-      list-style: none;
-      margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
 
     .krelis-nav__item {
-      margin-bottom: 1rem;
+    margin-bottom: 0;
     }
 
     .krelis-nav__link {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     }
 
     .krelis-nav__link:hover,
     .krelis-nav__link:focus {
-      background: rgba(242, 159, 5, 0.2);
-      color: #F29F05;
-      transform: translateX(6px);
+    transform: translateX(0);
+    transform: translateY(-2px);
     }
 
-    .krelis-nav__link.active {
-      background: #F29F05;
-      color: #002147;
-      font-weight: 600;
-    }
-
-    /* Overlay for mobile menu */
     .krelis-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 1500;
+    display: none;
     }
 
-    .krelis-overlay.active {
-      opacity: 1;
-      visibility: visible;
+    .krelis-calendar-hero__title {
+    font-size: 3.5rem;
     }
 
-    /* ===== HERO SECTION (Navy Blue) ===== */
+    .krelis-calendar-content {
+    max-width: 900px;
+    }
+
+    .krelis-calendar-month__title {
+    font-size: 1.6rem;
+    }
+}
+
+/*  */
+
+/* ===== CONTACTS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ===== HEADER ===== */
+.krelis-header {
+    background: #002147;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.krelis-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.krelis-header__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.krelis-header__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.krelis-header__menu-toggle {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-header__menu-toggle:hover,
+.krelis-header__menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Menu */
+.krelis-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #002147;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.krelis-nav.active {
+    right: 0;
+}
+
+.krelis-nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.krelis-nav__close:hover,
+.krelis-nav__close:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #F29F05;
+    outline-offset: 2px;
+}
+
+.krelis-nav__list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.krelis-nav__item {
+    margin-bottom: 1rem;
+}
+
+.krelis-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.krelis-nav__link:hover,
+.krelis-nav__link:focus {
+    background: rgba(242, 159, 5, 0.2);
+    color: #F29F05;
+    transform: translateX(6px);
+}
+
+.krelis-nav__link.active {
+    background: #F29F05;
+    color: #002147;
+    font-weight: 600;
+}
+
+/* Overlay for mobile menu */
+.krelis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1500;
+}
+
+.krelis-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION (Navy Blue) ===== */
+.krelis-contact-hero {
+    background: #002147;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.krelis-contact-hero__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.krelis-contact-hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+/* ===== CONTACT INFO & FORM SECTION ===== */
+.krelis-contact-wrapper {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-contact-card {
+    background: #e8e8e8;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Contact Info Items */
+.krelis-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.krelis-contact-info__item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.krelis-contact-info__icon {
+    font-size: 1.75rem;
+    color: #002147;
+    flex-shrink: 0;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.krelis-contact-info__content {
+    flex: 1;
+}
+
+.krelis-contact-info__label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.25rem;
+}
+
+.krelis-contact-info__text {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Contact Form */
+.krelis-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.krelis-contact-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.krelis-contact-form__input,
+.krelis-contact-form__textarea {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #b0b0b0;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.krelis-contact-form__input::placeholder,
+.krelis-contact-form__textarea::placeholder {
+    color: #999;
+}
+
+.krelis-contact-form__input:focus,
+.krelis-contact-form__textarea:focus {
+    outline: none;
+    border-color: #F29F05;
+    box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
+}
+
+.krelis-contact-form__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.krelis-contact-form__submit {
+    background: #F29F05;
+    color: #ffffff;
+    padding: 1.1rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
+    cursor: pointer;
+}
+
+.krelis-contact-form__submit:hover,
+.krelis-contact-form__submit:focus {
+    background: #D88D04;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+.krelis-contact-form__disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* ===== MAP SECTION ===== */
+.krelis-map {
+    background: #ffffff;
+    padding: 0 1.5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krelis-map__container {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.krelis-map__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+    .krelis-header {
+    padding: 1.25rem 3rem;
+    }
+
+    .krelis-header__title {
+    font-size: 1.3rem;
+    }
+
+    .krelis-header__logo {
+    width: 60px;
+    height: 60px;
+    }
+
     .krelis-contact-hero {
-      background: #002147;
-      color: #ffffff;
-      padding: 2.5rem 1.5rem 3rem;
-      text-align: center;
+    padding: 3.5rem 2rem 4rem;
     }
 
     .krelis-contact-hero__title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    font-size: 3rem;
     }
 
     .krelis-contact-hero__subtitle {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      opacity: 0.95;
+    font-size: 1.25rem;
     }
 
-    /* ===== CONTACT INFO & FORM SECTION ===== */
     .krelis-contact-wrapper {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+    padding: 2.5rem 2rem;
     }
 
     .krelis-contact-card {
-      background: #e8e8e8;
-      border-radius: 12px;
-      padding: 2rem 1.5rem;
-      margin-bottom: 2rem;
+    padding: 2.5rem 2rem;
     }
 
-    /* Contact Info Items */
     .krelis-contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .krelis-contact-info__item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
+    gap: 2rem;
     }
 
     .krelis-contact-info__icon {
-      font-size: 1.75rem;
-      color: #002147;
-      flex-shrink: 0;
-      width: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .krelis-contact-info__content {
-      flex: 1;
+    font-size: 2rem;
+    width: 40px;
     }
 
     .krelis-contact-info__label {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #002147;
-      margin-bottom: 0.25rem;
+    font-size: 1.2rem;
     }
 
     .krelis-contact-info__text {
-      font-size: 0.95rem;
-      color: #333;
-      line-height: 1.5;
+    font-size: 1rem;
     }
 
-    /* Contact Form */
     .krelis-contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .krelis-contact-form__group {
-      display: flex;
-      flex-direction: column;
+    gap: 1.25rem;
     }
 
     .krelis-contact-form__input,
     .krelis-contact-form__textarea {
-      padding: 0.85rem 1rem;
-      font-size: 1rem;
-      border: 2px solid #b0b0b0;
-      border-radius: 8px;
-      font-family: inherit;
-      transition: all 0.3s ease;
-      background: #ffffff;
-    }
-
-    .krelis-contact-form__input::placeholder,
-    .krelis-contact-form__textarea::placeholder {
-      color: #999;
-    }
-
-    .krelis-contact-form__input:focus,
-    .krelis-contact-form__textarea:focus {
-      outline: none;
-      border-color: #F29F05;
-      box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.1);
-    }
-
-    .krelis-contact-form__textarea {
-      min-height: 100px;
-      resize: vertical;
+    font-size: 1.05rem;
     }
 
     .krelis-contact-form__submit {
-      background: #F29F05;
-      color: #ffffff;
-      padding: 1.1rem 2rem;
-      font-size: 1.15rem;
-      font-weight: 700;
-      border-radius: 8px;
-      margin-top: 0.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(242, 159, 5, 0.3);
-      cursor: pointer;
-    }
-
-    .krelis-contact-form__submit:hover,
-    .krelis-contact-form__submit:focus {
-      background: #D88D04;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(242, 159, 5, 0.4);
-      outline: 2px solid #002147;
-      outline-offset: 2px;
-    }
-
-    .krelis-contact-form__disclaimer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-
-    /* ===== MAP SECTION ===== */
-    .krelis-map {
-      background: #ffffff;
-      padding: 0 1.5rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+    font-size: 1.25rem;
+    padding: 1.2rem 2.5rem;
     }
 
     .krelis-map__container {
-      width: 100%;
-      height: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .krelis-header__menu-toggle {
+    display: none;
     }
 
-    .krelis-map__iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .krelis-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
     }
 
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (min-width: 768px) {
-      .krelis-header {
-        padding: 1.25rem 3rem;
-      }
-
-      .krelis-header__title {
-        font-size: 1.3rem;
-      }
-
-      .krelis-header__logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .krelis-contact-hero {
-        padding: 3.5rem 2rem 4rem;
-      }
-
-      .krelis-contact-hero__title {
-        font-size: 3rem;
-      }
-
-      .krelis-contact-hero__subtitle {
-        font-size: 1.25rem;
-      }
-
-      .krelis-contact-wrapper {
-        padding: 2.5rem 2rem;
-      }
-
-      .krelis-contact-card {
-        padding: 2.5rem 2rem;
-      }
-
-      .krelis-contact-info {
-        gap: 2rem;
-      }
-
-      .krelis-contact-info__icon {
-        font-size: 2rem;
-        width: 40px;
-      }
-
-      .krelis-contact-info__label {
-        font-size: 1.2rem;
-      }
-
-      .krelis-contact-info__text {
-        font-size: 1rem;
-      }
-
-      .krelis-contact-form {
-        gap: 1.25rem;
-      }
-
-      .krelis-contact-form__input,
-      .krelis-contact-form__textarea {
-        font-size: 1.05rem;
-      }
-
-      .krelis-contact-form__submit {
-        font-size: 1.25rem;
-        padding: 1.2rem 2.5rem;
-      }
-
-      .krelis-map__container {
-        height: 350px;
-      }
+    .krelis-nav__close {
+    display: none;
     }
 
-    @media (min-width: 1024px) {
-      .krelis-header__menu-toggle {
-        display: none;
-      }
-
-      .krelis-nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .krelis-nav__close {
-        display: none;
-      }
-
-      .krelis-nav__list {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0;
-      }
-
-      .krelis-nav__item {
-        margin-bottom: 0;
-      }
-
-      .krelis-nav__link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .krelis-nav__link:hover,
-      .krelis-nav__link:focus {
-        transform: translateX(0);
-        transform: translateY(-2px);
-      }
-
-      .krelis-overlay {
-        display: none;
-      }
-
-      .krelis-contact-hero__title {
-        font-size: 3.5rem;
-      }
-
-      .krelis-contact-wrapper,
-      .krelis-map {
-        max-width: 900px;
-      }
-
-      .krelis-map__container {
-        height: 400px;
-      }
+    .krelis-nav__list {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
     }
+
+    .krelis-nav__item {
+    margin-bottom: 0;
+    }
+
+    .krelis-nav__link {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    }
+
+    .krelis-nav__link:hover,
+    .krelis-nav__link:focus {
+    transform: translateX(0);
+    transform: translateY(-2px);
+    }
+
+    .krelis-overlay {
+    display: none;
+    }
+
+    .krelis-contact-hero__title {
+    font-size: 3.5rem;
+    }
+
+    .krelis-contact-wrapper,
+    .krelis-map {
+    max-width: 900px;
+    }
+
+    .krelis-map__container {
+    height: 400px;
+    }
+}
