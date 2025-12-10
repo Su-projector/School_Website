@@ -8,7 +8,7 @@
 </head>
 <body>
     
-     <!-- ===== HEADER ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="krelis-header" role="banner">
         <a href="index.html" class="krelis-header__brand" aria-label="Krelis Legacy College Home">
             <img src="logo.png" alt="Krelis Legacy College Logo" class="krelis-header__logo">
@@ -24,53 +24,49 @@
         >
         ☰
         </button>
+
+        <!-- ===== MOBILE NAVIGATION ===== -->
+        <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+            <ul class="krelis-nav__list">
+                <li class="krelis-nav__item">
+                    <a href="index.html" class="krelis-nav__link">
+                        Home
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="about.html" class="krelis-nav__link">
+                        About Us
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="admissions.html" class="krelis-nav__link">
+                        Admissions
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="academics.html" class="krelis-nav__link active">
+                        Academics
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="calendar.html" class="krelis-nav__link">
+                        Calendar
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="contact.html" class="krelis-nav__link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <button class="krelis-nav__close" id="menuClose" aria-label="Close navigation menu">
+            ×
+            </button>
+        </nav>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="krelis-overlay" id="menuOverlay"></div>
     </header>
-
-    <!-- ===== MOBILE NAVIGATION ===== -->
-    <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
-        <ul class="krelis-nav__list">
-            <li class="krelis-nav__item">
-                <a href="index.html" class="krelis-nav__link">
-                    Home
-                </a>
-            </li>
-            <li class="krelis-nav__item">
-                <a href="about.html" class="krelis-nav__link">
-                    About Us
-                </a>
-            </li>
-            <li class="krelis-nav__item">
-                <a href="admissions.html" class="krelis-nav__link">
-                    Admissions
-                </a>
-            </li>
-            <li class="krelis-nav__item">
-                <a href="academics.html" class="krelis-nav__link active">
-                    Academics
-                </a>
-            </li>
-            <li class="krelis-nav__item">
-                <a href="calendar.html" class="krelis-nav__link">
-                    Calendar
-                </a>
-            </li>
-            <li class="krelis-nav__item">
-                <a href="contact.html" class="krelis-nav__link">
-                    Contact
-                </a>
-            </li>
-        </ul>
-        <button 
-        class="krelis-nav__close" 
-        id="menuClose" 
-        aria-label="Close navigation menu"
-        >
-        ×
-        </button>
-    </nav>
-
-    <!-- Overlay for mobile menu -->
-    <div class="krelis-overlay" id="menuOverlay"></div>
 
     <!-- ===== HERO SECTION ===== -->
     <section class="krelis-academics-hero">
@@ -485,7 +481,7 @@
         View Admissions Requirements
         </a>
     </div>
-
-</body>
+    
 <script src="script.js"></script>
+</body>
 </html>
