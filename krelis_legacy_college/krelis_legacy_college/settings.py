@@ -135,4 +135,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'haryohmideyokikiola@gmail.com'
 EMAIL_HOST_PASSWORD = 'gits txfk frrt hzrh'
 DEFAULT_FROM_EMAIL = 'haryohmideyokikiola@gmail.com'
-SCHOOL_ADMIN_EMAIL = 'risqotaribito@gmail.com'
+SCHOOL_ADMIN_EMAIL = 'effiongephraim95@gmail.com'
