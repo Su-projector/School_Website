@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Academics - Krelis Legacy College</title>
+</head>
+<body>
+    
+    <!-- ===== HEADER ===== -->
+    <header class="krelis-header" role="banner">
+        <a href="index.html" class="krelis-header__brand" aria-label="Krelis Legacy College Home">
+            <img src="logo.png" alt="Krelis Legacy College Logo" class="krelis-header__logo">
+            <h1 class="krelis-header__title">Krelis Legacy College</h1>
+        </a>
+
+        <button 
+        class="krelis-header__menu-toggle" 
+        id="menuToggle" 
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+        >
+        ☰
+        </button>
+
+        <!-- ===== MOBILE NAVIGATION ===== -->
+        <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+            <ul class="krelis-nav__list">
+                <li class="krelis-nav__item">
+                    <a href="index.html" class="krelis-nav__link">
+                        Home
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="about.html" class="krelis-nav__link">
+                        About Us
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="admissions.html" class="krelis-nav__link">
+                        Admissions
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="academics.html" class="krelis-nav__link active">
+                        Academics
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="calendar.html" class="krelis-nav__link">
+                        Calendar
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="contact.html" class="krelis-nav__link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <button class="krelis-nav__close" id="menuClose" aria-label="Close navigation menu">
+            ×
+            </button>
+        </nav>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="krelis-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="krelis-academics-hero">
+        <h2 class="krelis-academics-hero__title">
+            Academics at Krelis Legacy School
+        </h2>
+        <p class="krelis-academics-hero__subtitle">
+            Excellence across Primary and Secondary education
+        </p>
+    </section>
+
+    <!-- ===== ACCORDION/DROPDOWN SECTION ===== -->
+    <section class="krelis-accordion">
+        
+        <!-- Crèche and Nursery -->
+        <div class="krelis-accordion__item">
+            <div class="krelis-accordion__content" id="accordion-creche" role="region"
+                aria-labelledby="accordion-button-creche">
+                <div class="accordion-content-wrapper">
+                    <h3>
+                        Nurturing Young Minds for a Brighter Future
+                    </h3>
+                    <p>At Krelis Legacy School, our Crèche and Nursery program is designed
+                        to provide a safe, stimulating, and nurturing environment where 
+                        children can explore, learn, and grow. We focus on fostering 
+                        creativity, curiosity, and foundational skills through play-based 
+                        learning and age-appropriate activities.
+                    </p>
+                    <p>
+                        <strong>
+                            Age Range:
+                        </strong>
+                            1 to 5 years
+                    </p>
+                    <p>
+                        <strong>
+                            Key Features:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>Infant Care (Crèche): Personalized attention and care for 
+                            infants in a loving and secure environment.
+                        </li>
+                        <li>Nursery 1 & 2: Engaging activities that promote cognitive, 
+                            social, emotional, and physical development.
+                        </li>
+                        <li>Play-Based Learning: Hands-on experiences using toys, games, 
+                            and creative play to develop early literacy, numeracy, and 
+                            motor skills.
+                        </li>
+                    </ul>
+                    
+                    <p>In addition to academic readiness, we emphasize character 
+                        development,  teaching values such as kindness, respect, and 
+                        cooperation. Our goal is to lay a strong foundation for lifelong 
+                        learning while ensuring every child feels valued and supported.
+                    </p>
+                
+                <div class="content-divider"></div>
+            
+                    <p>
+                        <strong>
+                            Subjects Offered:
+                        </strong>
+                    </p>
+                    <ul class="subject-grid">
+                    <li>Early Literacy</li>
+                    <li>Basic Phonics</li>
+                    <li>Numeracy (Counting & Numbers)</li>
+                    <li>Creative Arts & Crafts</li>
+                    <li>Music & Movement</li>
+                    <li>Storytelling</li>
+                    <li>Physical Education</li>
+                    <li>Social Skills Development</li>
+                    </ul>
+                </div>
+                <button class="krelis-accordion__button" aria-expanded="false"
+                aria-controls="accordion-creche" id="accordion-button-creche">
+                <span>
+                    Crèche and Nursery
+                </span>
+                <span class="krelis-accordion__icon" aria-hidden="true">
+                    »
+                </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lower Primary -->
+        <div class="krelis-accordion__item">
+            <button class="krelis-accordion__button" aria-expanded="false" aria-controls=
+            "accordion-lower" id="accordion-button-lower">
+                <span>
+                    Lower Primary
+                </span>
+                <span class="krelis-accordion__icon" aria-hidden="true">
+                    »
+                </span>
+            </button>
+            <div class="krelis-accordion__content" id="accordion-lower" role="region"
+                aria-labelledby="accordion-button-lower">
+                <div class="accordion-content-wrapper">
+                <h3>
+                    Year 1 to 3 (Grade 1 to 3)
+                </h3>
+                <p>
+                    At Krelis Legacy School, our Lower Primary program (Years 1 to 3) is
+                    designed to build a strong academic foundation while nurturing curiosity,
+                    creativity, and critical thinking. We provide a structured yet engaging
+                    curriculum that prepares students for more advanced learning in the years
+                    to come.
+                </p>
+                <p>
+                    <strong>
+                        Age Range:
+                    </strong>
+                        6 to 8 years
+                </p>
+                <p>
+                    Through a balanced approach of core academics, creative exploration, 
+                    and character development, students develop essential literacy and 
+                    numeracy skills, problem-solving abilities, and a love for learning.
+                    Our experienced teachers create a supportive and inclusive classroom 
+                    environment where every child is encouraged to reach their full potential.
+                </p>
+                <p>
+                    In addition to academics, we focus on values-based education, helping
+                    students develop respect, responsibility, and teamwork. We also integrate
+                    technology into the classroom to enhance learning and equip students with
+                    21st-century skills.
+                </p>
+                <div class="content-divider"></div> 
+                <p>
+                    <strong>
+                        Subjects Offered (Core & Elective):
+                    </strong>
+                </p>
+                <ul class="subject-grid">
+                    <li>English Language</li>
+                    <li>Mathematics</li>
+                    <li>Basic Science</li>
+                    <li>Social Studies</li>
+                    <li>Civic Education</li>
+                    <li>Christian Religious Studies</li>
+                    <li>Islamic Religious Studies</li>
+                    <li>Computer Studies</li>
+                    <li>Physical & Health Education</li>
+                    <li>Creative Arts</li>
+                    <li>Music</li>
+                    <li>Handwriting</li>
+                    <li>French</li>
+                    <li>Yoruba (Mother Tongue)</li>
+                </ul>
+            
+                </div>
+            </div>
+        </div>
+
+        <!-- Upper Primary -->
+        <div class="krelis-accordion__item">
+            <button 
+                class="krelis-accordion__button" 
+                aria-expanded="false"
+                aria-controls="accordion-upper"
+                id="accordion-button-upper">
+                <span>Upper Primary</span>
+                <span class="krelis-accordion__icon" aria-hidden="true">»</span>
+            </button>
+            <div class="krelis-accordion__content" id="accordion-upper" role="region"
+            aria-labelledby="accordion-button-upper">
+                <div class="accordion-content-wrapper">
+                    <h3>Year 4 to 6 (Grade 4 to 6): Ages 9 to 11</h3>
+                    <p>At Krelis Legacy School, our Upper Primary program (Years 4 to 6) prepares students for the transition to secondary education by strengthening their academic foundation and fostering independent learning. We focus on developing critical thinking, problem-solving, and effective communication skills.</p>
+                    
+                    <p><strong>Age Range:</strong> 9 to 11 years</p>
+                    
+                    <p>Our curriculum is designed to deepen students' understanding of core subjects while introducing more specialized topics. We emphasize literacy, numeracy, and scientific inquiry, equipping students with the skills they need to excel academically and adapt to new challenges.</p>
+                    
+                    <p>In addition to academics, we promote leadership, responsibility, and teamwork through group projects, presentations, and collaborative learning. Students are encouraged to set goals, manage their time effectively, and take ownership of their education.</p>
+                    
+                    <p>We also integrate technology into lessons to enhance digital literacy and prepare students for an increasingly tech-driven world. Our supportive teachers guide students as they build confidence, resilience, and a lifelong love of learning.</p>
+                    
+                <div class="content-divider"></div>
+            
+                    <p><strong>Subjects Offered (Core & Elective):</strong></p>
+                    <ul class="subject-grid">
+                        <li>English Language</li>
+                        <li>Mathematics</li>
+                        <li>Basic Science</li>
+                        <li>Basic Technology</li>
+                        <li>Social Studies</li>
+                        <li>Civic Education</li>
+                        <li>Christian Religious Studies</li>
+                        <li>Islamic Religious Studies</li>
+                        <li>Computer Studies/ICT</li>
+                        <li>Physical & Health Education</li>
+                        <li>Creative & Cultural Arts</li>
+                        <li>Music</li>
+                        <li>Agriculture</li>
+                        <li>Home Economics</li>
+                        <li>French</li>
+                        <li>Yoruba (Mother Tongue)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Junior Secondary (JSS) -->
+        <div class="krelis-accordion__item">
+            <button class="krelis-accordion__button" aria-expanded="false"
+                aria-controls="accordion-jss" id="accordion-button-jss">
+                <span>Junior Secondary (JSS)</span>
+                <span class="krelis-accordion__icon" aria-hidden="true">
+                    »
+                </span>
+            </button>
+            <div class="krelis-accordion__content" id="accordion-jss" role="region"
+            aria-labelledby="accordion-button-jss">
+                <div class="accordion-content-wrapper">
+                <h3>Year 7 to 9 (JSS 1 to JSS 3)</h3>
+                <p>At Krelis Legacy School, our Junior Secondary program (JSS 1 to 3) provides a comprehensive and well-rounded education that prepares students for Senior Secondary School and beyond. We focus on academic excellence, critical thinking, and character development in a supportive and engaging learning environment.</p>
+                
+                <p><strong>Age Range:</strong> 12 to 14 years</p>
+                
+                <p>Students are exposed to a broad curriculum covering core and vocational subjects, ensuring they develop both intellectual and practical skills. Our teachers employ interactive teaching methods, including experiments, projects, and discussions, to make learning dynamic and engaging.</p>
+                
+                <p>In this stage, students begin to explore their strengths and interests through exposure to sciences, arts, technology, and entrepreneurship. We encourage self-discipline, responsibility, and leadership, preparing them for the Junior Secondary School Certificate Examination (BECE/JSCE). Our emphasis on moral values, teamwork, and problem-solving equips students with the skills needed to thrive academically and socially.</p>
+                
+                <div class="content-divider"></div>
+                
+                <p><strong>Subjects Offered (Core & Elective):</strong></p>
+                <ul class="subject-grid">
+                    <li>English Language</li>
+                    <li>Mathematics</li>
+                    <li>Basic Science</li>
+                    <li>Basic Technology</li>
+                    <li>Social Studies</li>
+                    <li>Civic Education</li>
+                    <li>Christian Religious Studies</li>
+                    <li>Islamic Religious Studies</li>
+                    <li>Computer Studies/ICT</li>
+                    <li>Physical & Health Education</li>
+                    <li>Business Studies</li>
+                    <li>Home Economics</li>
+                    <li>Agricultural Science</li>
+                    <li>French</li>
+                    <li>Yoruba (Mother Tongue)</li>
+                    <li>Creative Arts</li>
+                    <li>Music</li>
+                    <li>Vocational Aptitude</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Senior Secondary (SSS) -->
+        <div class="krelis-accordion__item">
+                <button class="krelis-accordion__button" aria-expanded="false"
+                    aria-controls="accordion-sss" id="accordion-button-sss">
+                    <span>Senior Secondary (SSS)</span>
+                    <span class="krelis-accordion__icon" aria-hidden="true">
+                        »
+                    </span>
+                </button>
+            <div class="krelis-accordion__content" id="accordion-sss" role="region"
+                aria-labelledby="accordion-button-sss">
+                <div class="accordion-content-wrapper">
+                <h3>
+                    Year 10 to 12 (SSS 1 to SSS 3)
+                </h3>
+                <p>
+                    At Krelis Legacy School, our Senior Secondary program (SSS 1 to 3) is 
+                    designed to prepare students for higher education, career success, 
+                    and responsible citizenship. We offer a rigorous and well-structured 
+                    curriculum aligned with national standards, providing students with the
+                    academic foundation they need to excel in their chosen fields.
+                </p>
+                
+                <p>
+                    <strong>
+                        Age Range:
+                    </strong> 
+                        15 to 17 years
+                </p>
+                
+                <p>Students can choose from three major academic pathways:</p>
+                <ul>
+                    <li>
+                        <strong>
+                            Science Track:
+                        </strong>
+                            For students interested in medicine, engineering, technology,
+                            and research.
+                        </li>
+                    <li>
+                        <strong>
+                            Commercial Track:
+                        </strong>
+                            For students pursuing business, finance, accounting, and
+                            management.
+                        </li>
+                    <li>
+                        <strong>
+                            Arts/Humanities Track:
+                        </strong>
+                            For students interested in law, languages, social sciences, and
+                            creative fields.
+                        </li>
+                </ul>
+                
+                <p>
+                    Our experienced teachers provide personalized guidance, helping students
+                    develop analytical thinking, problem-solving skills, and independent
+                    learning. We emphasize exam preparation for the West African Senior School
+                    Certificate Examination (WASSCE) and the National Examination Council (NECO)
+                    exams.
+                </p>
+                
+                <p>
+                    Beyond academics, we focus on leadership development, entrepreneurship, and
+                    career counseling to help students make informed decisions about their future.
+                    Through extracurricular activities, mentorship programs, and community service, 
+                    we prepare well-rounded individuals ready to make a positive impact in society.
+                </p>
+                
+                <div class="content-divider"></div>
+            
+                <p>
+                    <strong>
+                        Subjects Offered (Based on Chosen Track):
+                    </strong>
+                </p>
+                
+                <p>
+                    <strong>
+                        Core Subjects (All Students):
+                    </strong>
+                </p>
+                <ul class="subject-grid">
+                    <li>English Language</li>
+                    <li>Mathematics</li>
+                    <li>Civic Education</li>
+                    <li>General Studies</li>
+                </ul>
+                
+                <p><strong>Science Track:</strong></p>
+                <ul class="subject-grid">
+                    <li>Physics</li>
+                    <li>Chemistry</li>
+                    <li>Biology</li>
+                    <li>Further Mathematics</li>
+                    <li>Agricultural Science</li>
+                    <li>Computer Science</li>
+                </ul>
+                
+                <p><strong>Commercial Track:</strong></p>
+                <ul class="subject-grid">
+                    <li>Economics</li>
+                    <li>Commerce</li>
+                    <li>Accounting</li>
+                    <li>Business Studies</li>
+                    <li>Government</li>
+                    <li>Financial Accounting</li>
+                </ul>
+                
+                <p><strong>Arts/Humanities Track:</strong></p>
+                <ul class="subject-grid">
+                    <li>Literature in English</li>
+                    <li>Government</li>
+                    <li>Christian Religious Studies</li>
+                    <li>Islamic Religious Studies</li>
+                    <li>History</li>
+                    <li>Geography</li>
+                    <li>French</li>
+                    <li>Yoruba</li>
+                </ul>
+                
+                <p><strong>Elective/Vocational Subjects:</strong></p>
+                <ul class="subject-grid">
+                    <li>Home Economics</li>
+                    <li>Fine Art</li>
+                    <li>Music</li>
+                    <li>Physical & Health Education</li>
+                    <li>Technical Drawing</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== EXTRACURRICULAR ACTIVITIES ===== -->
+    <section class="krelis-extracurricular">
+        <h3 class="krelis-extracurricular__title">Extracurricular Activities</h3>
+        <div class="krelis-extracurricular__grid">
+        <div class="krelis-extracurricular__badge">Sports</div>
+        <div class="krelis-extracurricular__badge">Music</div>
+        <div class="krelis-extracurricular__badge">Drama</div>
+        <div class="krelis-extracurricular__badge">Debate</div>
+        <div class="krelis-extracurricular__badge">Art Club</div>
+        <div class="krelis-extracurricular__badge">Science Club</div>
+        <div class="krelis-extracurricular__badge">Robotics</div>
+        <div class="krelis-extracurricular__badge">Chess</div>
+        <div class="krelis-extracurricular__badge">Coding</div>
+        <div class="krelis-extracurricular__badge">Community Service</div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BUTTON ===== -->
+    <div class="krelis-cta-wrapper">
+        <a href="admissions.html" class="krelis-cta-button">
+        View Admissions Requirements
+        </a>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>

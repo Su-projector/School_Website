@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online Admission Form - Krelis Legacy College</title>
+</head>
+<body>
+    
+    <!-- ===== HEADER ===== -->
+    <header class="krelis-header" role="banner">
+        <a href="index.html" class="krelis-header__brand" aria-label="Krelis Legacy College Home">
+        <img src="logo.png" alt="Krelis Legacy College Logo" class="krelis-header__logo">
+        <h1 class="krelis-header__title">Krelis Legacy College</h1>
+        </a>
+        <button class="krelis-header__menu-toggle" id="menuToggle" aria-label="Open navigation 
+        menu" aria-expanded="false" aria-controls="mainNav">
+        ☰
+        </button>
+
+        <!-- ===== MOBILE NAVIGATION ===== -->
+        <nav class="krelis-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+            <ul class="krelis-nav__list">
+                <li class="krelis-nav__item">
+                    <a href="index.html" class="krelis-nav__link">
+                        Home
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="about.html" class="krelis-nav__link">
+                        About Us
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="admissions.html" class="krelis-nav__link">
+                        Admissions
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="academics.html" class="krelis-nav__link">
+                        Academics
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="calendar.html" class="krelis-nav__link">
+                        Calendar
+                    </a>
+                </li>
+                <li class="krelis-nav__item">
+                    <a href="contact.html" class="krelis-nav__link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <button class="krelis-nav__close" id="menuClose" aria-label="Close navigation menu">
+            ×
+            </button>
+        </nav>
+
+        <!-- Overlay for mobile menu -->
+        <div class="krelis-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="krelis-form-hero">
+        <h2 class="krelis-form-hero__title">
+            Online Admission Form
+        </h2>
+        <p class="krelis-form-hero__subtitle">
+            Seamless admissions to the legacy of excellence.</p>
+    </section>
+
+    <!-- ===== FORM SECTION ===== -->
+    <section class="krelis-form-wrapper">
+        <form class="krelis-form" id="admissionForm" novalidate>
+        
+        <!-- First Name -->
+        <div class="krelis-form__group">
+            <label for="firstName" class="krelis-form__label krelis-form__label--required">
+                First Name
+            </label>
+            <input type="text" id="firstName" name="firstName" class="krelis-form__input"                required
+            aria-required="true">
+        </div>
+
+        <!-- Surname -->
+        <div class="krelis-form__group">
+            <label for="surname" class="krelis-form__label krelis-form__label--required">
+                Surname
+            </label>
+            <input type="text" id="surname" name="surname" class="krelis-form__input" required
+            aria-required="true">
+        </div>
+
+        <!-- Other Name -->
+        <div class="krelis-form__group">
+            <label for="otherName" class="krelis-form__label krelis-form__label--required">
+                Other Name
+            </label>
+            <input type="text" id="otherName" name="otherName" class="krelis-form__input"
+            required aria-required="true">
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="krelis-form__group">
+            <label for="dateOfBirth" class="krelis-form__label krelis-form__label--required">
+                Date of Birth
+            </label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" class="krelis-form__input"
+            requirea aria-required="true">
+        </div>
+
+        <!-- Place of Birth -->
+        <div class="krelis-form__group">
+            <label for="placeOfBirth" class="krelis-form__label krelis-form__label--required">
+                Place of Birth
+            </label>
+            <input type="text" id="placeOfBirth" name="placeOfBirth" class="krelis-form__input"
+            required aria-required="true">
+        </div>
+
+        <!-- Sex -->
+        <div class="krelis-form__group">
+            <label class="krelis-form__label krelis-form__label--required">
+                Sex
+            </label>
+            <div class="krelis-form__radio-group">
+                <div class="krelis-form__radio-wrapper">
+                <input type="radio" id="male" name="sex" value="male" class="krelis-form__radio"
+                    required aria-required="true">
+                <label for="male" class="krelis-form__radio-label">
+                    Male
+                </label>
+            </div>
+            <div class="krelis-form__radio-wrapper">
+                <input type="radio" id="female" name="sex" value="female" 
+                    class="krelis-form__radio" required aria-required="true">
+                <label for="female" class="krelis-form__radio-label">
+                    Female
+                </label>
+            </div>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="krelis-form__group">
+            <label for="address" class="krelis-form__label krelis-form__label--required">
+                Address
+            </label>
+            <textarea id="address" name="address" class="krelis-form__textarea" required
+                aria-required="true">
+            </textarea>
+        </div>
+
+        <!-- Parent's or Guardian's Name -->
+        <div class="krelis-form__group">
+            <label for="parentName" class="krelis-form__label krelis-form__label--required">
+                Parent's or Guardian's Name
+            </label>
+            <input type="text" id="parentName" name="parentName" class="krelis-form__input" 
+            required aria-required="true">
+        </div>
+
+        <!-- Parent's or Guardian's Telephone / E-mail -->
+        <div class="krelis-form__group">
+            <label for="parentContact" class="krelis-form__label krelis-form__label--required">
+                Parent's or Guardian's Telephone / E-mail
+            </label>
+            <input type="text" id="parentContact" name="parentContact" class="krelis-form__input"
+            required aria-required="true">
+        </div>
+
+        <!-- Student's Telephone / E-mail -->
+        <div class="krelis-form__group">
+            <label for="studentContact" class="krelis-form__label">
+                Student's Telephone / E-mail
+            </label>
+            <input type="text" id="studentContact" name="studentContact" 
+            class="krelis-form__input">
+        </div>
+
+        <!-- Class in Which Admission Is Sought -->
+        <div class="krelis-form__group">
+            <label for="classAdmission" class="krelis-form__label krelis-form__label--required">
+                Class in Which Admission Is Sought
+            </label>
+            <input type="text" id="classAdmission" name="classAdmission" 
+            class="krelis-form__input" required aria-required="true">
+        </div>
+
+        <!-- Former School -->
+        <div class="krelis-form__group">
+            <label for="formerSchool" class="krelis-form__label">Former School</label>
+            <input type="text" id="formerSchool" name="formerSchool" 
+            class="krelis-form__input">
+        </div>
+
+        <!-- Class -->
+        <div class="krelis-form__group">
+            <label for="currentClass" class="krelis-form__label">Class</label>
+            <input type="text" id="currentClass" name="currentClass" 
+            class="krelis-form__input">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="krelis-form__submit">
+        Submit Form
+        </button>
+
+        <!-- Disclaimer -->
+        <p class="krelis-form__disclaimer">
+        *Our team ensures timely responses, usually within 24 hours.*
+        </p>
+
+        </form>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
